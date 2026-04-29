@@ -31,7 +31,24 @@
  *     Now hurry Marty! Or I will be stuck in the past forever!
  *
  *     Doc Brown - 1955-11-05
+ *     Wimhofer Tamara - 2026-04-29
  *******************************************************/
 
 // HINT:
 // setInterval(functionName, 1000); will call functionName() every 1000 miliseconds.
+
+function tick(){
+    const TIME = timeNow();
+
+    digitalClock(TIME);
+    analagoueClock(TIME);
+}
+
+setInterval(tick, 1000);
+
+document.getElementById("save-btn").addEventListener("click", function(){
+    const TIME = timeNow();
+    const SAVESTRING = TIME.hours + ":" + TIME.minutes + ":" + TIME.seconds;
+    localStorage.setItem("flux_capacitor_time", SAVESTRING);
+    alert("Zeit gespeichert: " + SAVESTRING);
+});
