@@ -1,11 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Back to the Future</title>
+    <title>Back to the Future - Clock Sync</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
+
+<h1>Zeit-Synchronisator</h1>
+
+<div id="digitalClock">00:00:00</div>
+
+<hr>
+
+<div class="analagoueClock">
+    <div id="hour-hand" class="hand"></div>
+    <div id="min-hand" class="hand"></div>
+    <div id="sec-hand" class="hand"></div>
+</div>
+
+<br>
+
+<button id="save-btn">Zeit speichern</button>
+
+<script src="js/model.time.js"></script>
+<script src="js/view.digital.js"></script>
+<script src="js/view.analagoue.js"></script>
+<script src="js/controller.js"></script>
 
 </body>
 </html>
